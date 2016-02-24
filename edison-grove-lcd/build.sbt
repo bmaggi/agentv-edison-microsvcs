@@ -23,6 +23,8 @@ resolvers += "nuvo.io maven repo" at "http://nuvo-io.github.com/mvn-repo/snapsho
 
 resolvers += "Local Repo"at  "file://"+Path.userHome.absolutePath+"/.ivy2/local"
 
+unmanagedBase <<= baseDirectory { base => base / "../external-dependencies" }
+
 libraryDependencies += "com.prismtech" % "agentv-microsvc_2.11" % "0.5.0-SNAPSHOT"
 
 libraryDependencies += "com.prismtech" % "agentv-prelude_2.11" % "0.5.0-SNAPSHOT"
@@ -34,5 +36,7 @@ libraryDependencies += "com.prismtech.cafe" % "cafe" % "2.2.1-SNAPSHOT"
 libraryDependencies += "io.nuvo" % "moliere_2.11" % "0.12.0-SNAPSHOT"
 
 libraryDependencies += "io.nuvo" % "nuvo-core_2.11" % "0.3.0-SNAPSHOT"
+
+
 
 publishTo := Some(Resolver.file("file",  new File( "/Users/veda/hacking/labs/techo/mvn-repo/snapshots" )) )

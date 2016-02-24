@@ -1,6 +1,8 @@
 *.class
 *.log
-*.jar
+#allow external-dependencies/*.jar
+bin/repository/*.jar
+lib/*.jar
 
 # sbt specific
 .cache

@@ -23,6 +23,8 @@ resolvers += "nuvo.io maven repo" at "http://nuvo-io.github.com/mvn-repo/snapsho
 
 resolvers += "Local Repo"at  "file://"+Path.userHome.absolutePath+"/.ivy2/local"
 
+unmanagedBase <<= baseDirectory { base => base / "../external-dependencies" }
+
 libraryDependencies += "com.prismtech" % "agentv-microsvc_2.11" % "0.5.0-SNAPSHOT"
 
 libraryDependencies += "com.prismtech" % "agentv-prelude_2.11" % "0.5.0-SNAPSHOT"
