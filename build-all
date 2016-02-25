@@ -2,6 +2,7 @@
 
 # Notice that the order matters, due to build dependencies"
 
+set -e
 
 MSVC_PKGS="edison-core-types edison-grove-airquality edison-grove-luminosity edison-grove-temperature edison-grove-lcd edison-grove-led edison-smartled"
 
