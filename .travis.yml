@@ -1,3 +1,4 @@
 language: scala
 script:
   - ./build-all
+  - ./isntall-all
