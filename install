@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./bin/version
-
+set -e
 rm -Rf ./jars &>/dev/null
 mkdir ./jars
 find . -name "*${AGENTV_VERSION}.jar" -exec cp {} ./lib/ &> /dev/null \;
